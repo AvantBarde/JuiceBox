@@ -43,6 +43,7 @@ async function updateUser(id, fields = {}) {
       RETURNING *;
     `, Object.values(fields)
     );
+
     return user;
   } catch (error) {
     throw error;
