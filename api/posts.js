@@ -55,8 +55,8 @@ postsRouter.post("/", requireUser, async (req, res, next) => {
       res.send({ post });
     } else {
       next({
-        name: "Post creation error!",
-        message: "You screwed up something.",
+        name: "User not allowed",
+        message: "Cannot update post",
       });
     }
   } catch ({ name, message }) {
