@@ -12,7 +12,7 @@ postsRouter.post("/", requireUser, async (req, res, next) => {
   res.send({ message: "under construction" });
 });
 
-postsRouter.get("/", async (req, res) => {
+postsRouter.get("/", async (req, res, next) => {
   try {
     const allPosts = await getAllPosts();
 
