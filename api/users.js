@@ -19,8 +19,7 @@ usersRouter.get("/", async (req, res) => {
     throw err;
   }
 });
-
-usersRouter.post("/login", async (req, res, next) => {
+herusersRouter.post("/login", async (req, res, next) => {
   const { username, password } = req.body;
 
   // request must have both
